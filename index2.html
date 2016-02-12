@@ -9,9 +9,45 @@
 <body ng-app="MyApp">
 	<div ng-controller="MainController as mainCtrl">
 
+		<button ng-click="mainCtrl.onButtonClick()">Click Me</button>
+
+		<input type="checkbox" ng-model
+
+		<h3>Radio ng-model</h3>
+		<h3 ng-bind="mainCtrl.username"></h3>
+		<input type="radio" name="animal" value="" ng-model="mainCtrl.animalSelected">Dog
+		<input type="radio" name="animal" value="" ng-model="mainCtrl.animalSelected">Cat
+		<input type="radio" name="animal" value="" ng-model="mainCtrl.animalSelected">Bird
+
+		<h3>checkbox ng-model</h3>
+		<h3 ng-bind="mainCtrl.select"></h3>
+		<input type="checkbox" ng-model="mainCtrl.select">
+
+		<h3>Text ng-model</h3>
+		<h3 ng-bind="mainCtrl.username"></h3>
+		<input type="text" ng-model="mainCtrl.username">
+
 		<div ng-bind="mainCtrl.greeting"></div>
 
-		<h3>{{mainCtrl.greeting + mainCtrl.greeting + (2+2)}}</h3>
+		<!--<h3>{{mainCtrl.greeting + mainCtrl.greeting + (2+2)}}</h3>-->
+
+		<h3>Simple ng-repeat</h3>
+		<div ng-repeat="item in mainCtrl.simpleArray">
+			<h4 ng-bind="item"></h4>
+			<div ng-bind="$middle"></div>
+			<br/>
+			<br/>
+		</div>
+
+		<h3>Intermediate ng-repeat</h3>
+		<div ng-repeat="person in mainCtrl.interArray">
+			<h4 ng-bind="person.name"></h4>
+		</div>
+
+		<h3>Object ng-repeat</h3>
+		<div ng-repeat="(key, value) in ctrl.states">
+			<h3 ></h3>
+		</div>
 	</div>
 	
 </body>
