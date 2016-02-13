@@ -1,15 +1,34 @@
-
-
 angular.module('MyApp', [])
 
 .controller('MainController', function() {
 	var self = this;
 
-	self.onButtonClick= function() {
-		alert('you clicked the button');
+	self.onButtonClick = function(show) {
+		if (show) {
+			alert('you clicked the button');
+		}
+	};
+
+	self.classObject = {
+		red: false,
+		green: false,
+		yellow: false
 	}
 
-	<input 
+	self.myDog = {
+		name: 'Max'
+	};
+
+	self.myCat = {
+		name: 'Sally'
+	};
+
+	self.myCow = {
+		name: 'Harry'
+	};
+
+
+	self.select = true;
 
 	self.username = 'tommy';
 
